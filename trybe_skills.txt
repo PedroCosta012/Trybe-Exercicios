@@ -1,3 +1,5 @@
+- HTML
+- CSS
 O que eu vou aprender na Trybe:
 
 - Unix
