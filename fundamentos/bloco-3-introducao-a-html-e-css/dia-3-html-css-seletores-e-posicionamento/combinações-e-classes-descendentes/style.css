@@ -29,9 +29,33 @@ li {
 }
 
 .ling-init {
-    color: aqua;
+  color: aqua;
 }
 
 .java {
-    background-color: pink;
+  background-color: pink;
+}
+
+ul li a:hover {
+    font-weight: 900;
+}
+
+#stackoverflow {
+    color: orange;
+}
+
+#w3schools {
+    color: green;
+}
+
+#mozilla {
+    color: black;
+}
+
+#devdocs {
+    color: rgb(207, 207, 0);
+}
+
+#trybe {
+    color: limegreen;
 }
