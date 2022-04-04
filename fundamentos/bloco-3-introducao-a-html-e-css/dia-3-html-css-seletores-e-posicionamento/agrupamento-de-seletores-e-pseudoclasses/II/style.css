@@ -1,0 +1,32 @@
+div:hover {
+    border: 5px solid orange;
+}
+
+#first-div {
+    color: rgba(85, 182, 150, 0.836);
+}
+
+#second-div {
+    color: rgba(174, 80, 211, 0.836);
+}
+
+#third-div {
+    color: rgba(228, 225, 89, 0.836);
+}
+
+#fourth-div {
+    color: rgba(6, 17, 124, 0.836);
+}
+
+#fifth-div {
+    color: rgba(233, 146, 146, 0.836);
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.impar {
+    font-style: italic;
+}
