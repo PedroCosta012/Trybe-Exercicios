@@ -5,4 +5,5 @@ for (let number of numbers) {
     soma += number;
 }
 
-console.log(soma);
+let media = soma / numbers.length;
+console.log(media);
