@@ -1,7 +1,8 @@
-const fatorando = 10;
-let fator = 1;
+let word = 'tryber';
+let wordInvert = '';
 
-for (let i = 1; i <= fatorando; i++) {
-    fator *= i;
+for (let i = word.length - 1; i >= 0; i--) {
+    wordInvert += word[i];
 }
-console.log(fatorando + " fatorial é igual a: " + fator);
+
+console.log(wordInvert);
