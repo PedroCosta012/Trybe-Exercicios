@@ -1,5 +1,3 @@
-const frase = 'A base do teto desaba';
-
 function palindrome(texto) {
     let manip = [];
     let original = [];
@@ -23,8 +21,6 @@ function palindrome(texto) {
     }
 }
 
-// console.log(palindrome(frase));
-
 // Exercício 2
 const arrayNum = [10, 90, 23, 56, 53, 45, 46];
 
@@ -39,11 +35,7 @@ function maiorNum(array) {
     return maior;
 }
 
-// console.log(maiorNum(arrayNum));
-
 // Exercício 3
-const arrayNumero = [10, 3, 23, 56, 53, 45, 46];
-
 function menorNum(array) {
     let menor = 0;
 
@@ -55,17 +47,53 @@ function menorNum(array) {
     return menor;
 }
 
-console.log(menorNum(arrayNumero));
-
 // Exercício 4
-const names = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
-
 function biggestName(array) {
     let maiorNome = array[0];
-    for (let name of names) {
+    for (let name of array) {
         if (name.length > maiorNome.length) {
             maiorNome = name;
         }
     }
     return maiorNome;
+}
+
+// Exercício 5
+function mostRepeated(arrayRepeticoes) {
+    let dataFull = [];
+    
+    for (let num of arrayRepeticoes) {
+        dataFull.push([num, 0]);
+        for (let num2 of arrayRepeticoes) {
+            dataFull[dataFull.length - 1][1] += 1;
+        }
+    }
+    let maiorRep = dataFull[0][1];
+    let maiorNum = dataFull[0][0];
+
+    for (let biggest of dataFull) {
+        if (biggest[1] > maiorRep) {
+            maiorNum = biggest[0];
+        }
+    }
+    return maiorNum;
+}
+
+// Exercício 6
+function somaCascata(repetidor) {
+    let soma = 0;
+    for (let i = 0; i <= repetidor; i++) {
+        soma += i;
+    }
+    return soma;
+}
+
+// Exercício 7
+function confereFinal(word, endWord) {
+    for (let i = 0; i < endWord.length; i++) {
+        if (word[word.length - i] !== endWord[endWord.length - i]) {
+            return false;
+        }
+    }
+    return true;
 }
