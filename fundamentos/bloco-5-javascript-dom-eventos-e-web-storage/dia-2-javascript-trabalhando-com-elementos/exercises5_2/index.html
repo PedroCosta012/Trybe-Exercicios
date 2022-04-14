@@ -57,16 +57,67 @@
   </head>
   <body>
     <script>
-      // Exercício 1
-      let filhoH1 = document.createElement('h1');
-      let pai = document.querySelector('body');
-      filhoH1.innerText = 'Exercício 5.2 - JavaScript DOM';
-      pai.appendChild(filhoH1);
+      // Facilitador para os exercícios
+      function elementGenerator(dad, tag, tagText, className) {
+        let son = document.createElement(tag);
+        if (className !== undefined){
+          son.className = className;
+        }
+        if (tagText !== undefined){
+          son.innerText = tagText;
+        }
+        return dad.appendChild(son);
+      }
 
-      // Exercício 2
-      let filhoMain = document.createElement('main');
-      filhoMain.className = 'main-content';
-      pai.appendChild(filhoMain);
+      // Exercício 1.1 e  2.1
+      let body = document.querySelector('body');
+      let titulo = elementGenerator(body, 'h1', undefined, 'title');
+      titulo.innerText = 'Exercício 5.2 - JavaScript DOM';
+
+      // Exercício 1.2
+      let main = elementGenerator(body, 'main', undefined, 'main-content');
+
+      // Exercício 1.3
+      let section = elementGenerator(main, 'section', undefined, 'center-content');
+
+      // Exercício 1.4
+      let paragraph = elementGenerator(section, 'p', 'Este texto foi adicionado para fins de teste!');
+
+      // Exercício 1.5
+      let sectionLeft = elementGenerator(main, 'section', undefined, 'left-content');
+
+      // Exercício 1.6
+      let sectionRight = elementGenerator(main, 'section', undefined, 'right-content');
+
+      // Exercício 1.7
+      let image = elementGenerator(sectionLeft, 'img', undefined, 'small-image');
+      image.src = 'https://picsum.photos/200';
+
+      // Exercício 1.8
+      let unorderedList = elementGenerator(sectionRight, 'ul');
+      let liData = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      
+      for (let i = 0; i < 10; i++) {
+        elementGenerator(sectionRight.firstChild, 'li', liData[i]);
+      }
+
+      // Exercício 1.9 e 2.2
+      for (let j = 0; j < 3; j++) {
+        elementGenerator(main, 'h3', undefined, 'description');
+      }
+
+      // Exercício 2.3
+      main.removeChild(sectionLeft);
+
+      // Exercício 2.4
+      sectionRight.style.marginRight = 'auto';
+
+      // Exercício 2.5
+      section.style.backgroundColor = 'green';
+
+      // Exercício2.6
+      document.querySelector('.right-content ul').removeChild(document.querySelector('.right-content ul').lastChild);
+      document.querySelector('.right-content ul').removeChild(document.querySelector('.right-content ul').lastChild);
     </script>
   </body>
 </html>
