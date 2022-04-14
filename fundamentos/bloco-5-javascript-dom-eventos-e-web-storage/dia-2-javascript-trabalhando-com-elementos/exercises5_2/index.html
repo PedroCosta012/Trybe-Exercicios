@@ -58,9 +58,15 @@
   <body>
     <script>
       // Exercício 1
-      let filho = document.createElement('h1');
-      filho.innerText = 'Exercício 5.2 - JavaScript DOM';
-      document.querySelector('body').appendChild(filho);
+      let filhoH1 = document.createElement('h1');
+      let pai = document.querySelector('body');
+      filhoH1.innerText = 'Exercício 5.2 - JavaScript DOM';
+      pai.appendChild(filhoH1);
+
+      // Exercício 2
+      let filhoMain = document.createElement('main');
+      filhoMain.className = 'main-content';
+      pai.appendChild(filhoMain);
     </script>
   </body>
 </html>
