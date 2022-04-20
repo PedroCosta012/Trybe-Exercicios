@@ -118,6 +118,3 @@ function addTasks(color) {
 }
 
 addTasks('lime');
-
-// function ;
-
