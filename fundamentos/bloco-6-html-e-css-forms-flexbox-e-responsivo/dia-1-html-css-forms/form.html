@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Header da página</h1>
+    </header>
+    <main>
+        <form action="" method="post">
+            <label for="name">Nome: <input type="text" id="name" min="10" max="40" /></label>
+            <br>
+            <label for="email">Email: <input type="email" id="email" min="10" max="50" /></label>
+            <div>
+                <label for="op1"><input type="radio" id="city" />Cidade</label>
+                <label for="op2"><input type="radio" id="field" />Campo</label>
+                <label for="op3"><input type="radio" id="beach" />Praia</label>
+                <label for="op4"><input type="radio" id="hills" />Montanhas</label>
+            </div>
+            <div>
+                <label for="textBox">Espaço para digitar a resposta:<br><textarea name="dateBox" id="textBox" cols="30" rows="10" maxlength="500"></textarea /></label>
+            </div>
+            <label for="date">Qual a melhor data para realizar sua viagem? <input type="date" id="date" placeholder="dd/mm/aaaa" /></label>
+            <div>
+                <label for="checkbox1"><input type="checkbox" id="checkbox1" />Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+                <br>
+                <label for="checkbox2"><input type="checkbox" id="checkbox2" />Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+            </div>
+            <div id="buttons-area">
+                <button type="submit" id="send-answers">Enviar</button>
+                <button>Apagar</button>
+            </div>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
