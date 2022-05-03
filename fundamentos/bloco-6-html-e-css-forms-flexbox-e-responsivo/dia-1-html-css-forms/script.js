@@ -3,6 +3,8 @@ function setDefaultOptions() {
     button.preventDefault();
 }
 
-const 
-
 setDefaultOptions();
+
+function dateCheck() {
+    let dateBox = document.getElementById('date').DatePickerX.init();
+}
