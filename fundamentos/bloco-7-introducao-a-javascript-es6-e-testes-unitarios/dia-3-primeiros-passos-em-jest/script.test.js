@@ -1,4 +1,4 @@
-const { sum, myRemove, myFizzBuzz } = require('./script');
+const { sum, myRemove, myFizzBuzz, encode, decode } = require('./script');
 
 // Parte 1
 
@@ -57,5 +57,23 @@ describe('Teste da função myFizzBuzz', () => {
 
   it('Verifica se "75" retorna False', () => {
     expect(myFizzBuzz('75')).toBe(false);
+  });
+});
+
+// Parte 4
+
+describe('Teste das funções encode e decode', () => {
+  it('Verifica se "encode" e "decode" são funções', () => {
+    expect(typeof encode).toBe('function');
+    expect(typeof decode).toBe('function');
+  });
+
+  it('Verifica se a codificação é realizada corretamente', () => {
+    expect(encode('Esta função funciona em perfeito estado.')).toEqual('2st1 f5nçã4 f5nc34n1 2m p2rf23t4 2st1d4.');
+    expect(encode('E olha que eu testei 17 vezes.')).toEqual('2 4lh1 q52 25 t2st23 17 v2z2s.');
+  });
+
+  it('Verifica se a decodificação é realizada corretamente', () => {
+    expect()
   });
 });

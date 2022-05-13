@@ -27,4 +27,22 @@ function myFizzBuzz(num) {
   return num;
 }
 
-module.exports = { sum, myRemove, myFizzBuzz };
+// Parte 4
+function encode(encrypt) {
+  encrypt = encrypt.replace(/a/ig, '1');
+  encrypt = encrypt.replace(/e/ig, '2');
+  encrypt = encrypt.replace(/i/ig, '3');
+  encrypt = encrypt.replace(/o/ig, '4');
+  encrypt = encrypt.replace(/u/ig, '5');
+  return encrypt;
+}
+function decode(decrypt) {
+  decrypt = decrypt.replace(/1/g, 'a');
+  decrypt = decrypt.replace(/2/g, 'e');
+  decrypt = decrypt.replace(/3/g, 'i');
+  decrypt = decrypt.replace(/4/g, 'o');
+  decrypt = decrypt.replace(/5/g, 'u');
+  return decrypt;
+}
+
+module.exports = { sum, myRemove, myFizzBuzz, encode, decode };
