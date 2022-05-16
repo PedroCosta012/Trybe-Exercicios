@@ -62,17 +62,8 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
-function smallerName() {
-  let nameBook;
-  // escreva aqui o seu código
-  nameBook = books[0].name;
-  books.forEach((element) => {
-    if (element.name.length < nameBook.length) {
-      nameBook = element.name;
-    }
-  });
-  // Variável nameBook que receberá o valor do menor nome;
-  return nameBook;
-}
+const expectedResult = false;
 
-smallerName();
+function everyoneWasBornOnSecXX() {
+  // escreva seu código aqui
+}
