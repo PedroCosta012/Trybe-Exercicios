@@ -66,5 +66,5 @@ const expectedResult = false;
 
 function everyoneWasBornOnSecXX() {
   // escreva seu código aqui
-  
+  books.every((element) => element.author.birthYear)
 }
