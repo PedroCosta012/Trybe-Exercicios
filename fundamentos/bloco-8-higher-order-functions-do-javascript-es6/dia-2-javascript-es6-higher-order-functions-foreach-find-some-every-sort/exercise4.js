@@ -109,4 +109,15 @@ const expectedResult = [
 
 function booksOrderedByReleaseYearDesc() {
   // escreva aqui seu código
+  const orderFunction = (a, b) => {
+    if (a.releaseYear < b.releaseYear) {
+      return -1;
+    } else if (a.releaseYear > b.releaseYear) {
+      return 1;
+    }
+    return 0;
+  }
+  return books.sort(orderFunction);
 }
+
+booksOrderedByReleaseYearDesc();
