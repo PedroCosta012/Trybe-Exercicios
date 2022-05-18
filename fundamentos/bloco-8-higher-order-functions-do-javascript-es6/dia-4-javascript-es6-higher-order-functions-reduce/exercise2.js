@@ -66,4 +66,7 @@ const books = [
 
 function reduceNames() {
   // escreva seu código aqui
+  return books.reduce((a, b) => `${a}${b.author.name}, `, '');
 }
+
+console.log(reduceNames());
