@@ -62,21 +62,19 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
-const expectedResult = false;
 
-function authorUnique() {
+function nameAndAge() {
   // escreva seu código aqui
-  const mapped = books.map((book) => book.author.birthYear);
-  return mapped.forEach((birthOut, indexOut, arr) => {
-    return arr.map((birthIn, indexIn) => {
-      if (indexOut !== indexIn) {
-        if (birthIn === birthOut) {
-            
-        }
-      }
-    }, [birthOut, indexOut]);
-  });
-  
+  return books.map((element) => ({age: element.releaseYear - element.author.birthYear, name: element.author.name}));
 }
 
-console.log(authorUnique());
+const typeOrder = (a, b) => {
+  if (a.age < b.age) {
+    return -1;
+  } else if (a.age > b.age) {
+    return 1;
+  }
+  return 0;
+};
+
+const authorsAgeWhenPublished = nameAndAge().sort(typeOrder);

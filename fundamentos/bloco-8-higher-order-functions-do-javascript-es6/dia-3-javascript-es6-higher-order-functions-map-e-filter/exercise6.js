@@ -62,21 +62,9 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
-const expectedResult = false;
 
-function authorUnique() {
+function oldBooks() {
   // escreva seu código aqui
-  const mapped = books.map((book) => book.author.birthYear);
-  return mapped.forEach((birthOut, indexOut, arr) => {
-    return arr.map((birthIn, indexIn) => {
-      if (indexOut !== indexIn) {
-        if (birthIn === birthOut) {
-            
-        }
-      }
-    }, [birthOut, indexOut]);
-  });
-  
+  const old = books.filter((book) => (2022 - book.releaseYear) > 60);
+  return old.map((book) => book.name);
 }
-
-console.log(authorUnique());

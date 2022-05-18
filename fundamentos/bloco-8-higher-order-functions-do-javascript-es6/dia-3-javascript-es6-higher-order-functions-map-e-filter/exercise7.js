@@ -62,21 +62,9 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
-const expectedResult = false;
 
-function authorUnique() {
+function authorWith3DotsOnName() {
   // escreva seu código aqui
-  const mapped = books.map((book) => book.author.birthYear);
-  return mapped.forEach((birthOut, indexOut, arr) => {
-    return arr.map((birthIn, indexIn) => {
-      if (indexOut !== indexIn) {
-        if (birthIn === birthOut) {
-            
-        }
-      }
-    }, [birthOut, indexOut]);
-  });
-  
+  const found = books.filter((book) => book.author.name);
+  return found.map((book) => book.name);
 }
-
-console.log(authorUnique());

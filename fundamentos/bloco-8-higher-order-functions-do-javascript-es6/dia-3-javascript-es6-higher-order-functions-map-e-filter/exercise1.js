@@ -1,6 +1,6 @@
 const books = [
   {
-    id: 1,
+
     name: 'As Crônicas de Gelo e Fogo',
     genre: 'Fantasia',
     author: {
@@ -62,21 +62,5 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
-const expectedResult = false;
 
-function authorUnique() {
-  // escreva seu código aqui
-  const mapped = books.map((book) => book.author.birthYear);
-  return mapped.forEach((birthOut, indexOut, arr) => {
-    return arr.map((birthIn, indexIn) => {
-      if (indexOut !== indexIn) {
-        if (birthIn === birthOut) {
-            
-        }
-      }
-    }, [birthOut, indexOut]);
-  });
-  
-}
-
-console.log(authorUnique());
+console.log(books.map((element) => `${element.name} - ${element.genre} - ${element.author.name}`))

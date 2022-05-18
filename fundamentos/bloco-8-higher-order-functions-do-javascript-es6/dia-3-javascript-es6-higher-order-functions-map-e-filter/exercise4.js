@@ -62,21 +62,16 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
-const expectedResult = false;
 
-function authorUnique() {
-  // escreva seu código aqui
-  const mapped = books.map((book) => book.author.birthYear);
-  return mapped.forEach((birthOut, indexOut, arr) => {
-    return arr.map((birthIn, indexIn) => {
-      if (indexOut !== indexIn) {
-        if (birthIn === birthOut) {
-            
-        }
-      }
-    }, [birthOut, indexOut]);
-  });
-  
-}
+const oldBooks = books.filter((book) => (2022 - book.releaseYear) >= 60);
 
-console.log(authorUnique());
+const sortRules = (a, b) => {
+  if (2022 - a.releaseYear < 2022 - b.releaseYear) {
+    return 1
+  } else if  (2022 - a.releaseYear > 2022 - b.releaseYear) {
+    return -1
+  }
+  return 0;
+};
+
+const orderedOldBooks = oldBooks.sort(sortRules);

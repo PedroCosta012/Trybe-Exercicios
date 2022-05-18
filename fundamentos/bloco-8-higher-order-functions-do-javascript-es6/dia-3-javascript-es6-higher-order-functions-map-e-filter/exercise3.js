@@ -62,21 +62,11 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
-const expectedResult = false;
 
-function authorUnique() {
+function fantasyOrScienceFiction() {
   // escreva seu código aqui
-  const mapped = books.map((book) => book.author.birthYear);
-  return mapped.forEach((birthOut, indexOut, arr) => {
-    return arr.map((birthIn, indexIn) => {
-      if (indexOut !== indexIn) {
-        if (birthIn === birthOut) {
-            
-        }
-      }
-    }, [birthOut, indexOut]);
-  });
-  
+  return books.filter((book) => book.genre === 'Ficção Científica' || book.genre === 'Fantasia');
 }
+const fictionOrFantasy = fantasyOrScienceFiction();
 
-console.log(authorUnique());
+console.log(fictionOrFantasy);
